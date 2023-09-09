@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Lobster&family=Oswald:wght@300&family=Poppins:wght@400;700&family=Roboto:ital,wght@0,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Lobster&family=Oswald:wght@300&family=Poppins:wght@400;700&family=Roboto:ital,wght@0,400;1,700&display=swap");
 
 /* font-family: 'Caprasimo', cursive;
 font-family: 'Lobster', cursive;
@@ -6,91 +6,169 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-:root{
-    --primary-text-color:#183b56;
-    --secondary-text-color:#577592;
-    --accent-color:#2294ed;
-    --accent-color-dark:#1d69a3;
-    --padding-inline-section:20px;
+:root {
+  --primary-text-color: #183b56;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+  --padding-inline-section: 20px;
 }
-body{
-    font-family: 'Poppins', sans-serif;
-    color:var(--primary-text-color);
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
 }
-h1{
-    font-size: 3rem;
+h1 {
+  font-size: 3rem;
 }
-h2{
-    font-size: 2rem;
+h2 {
+  font-size: 2rem;
 }
-h3{
-    font-size: 1.5rem;
+h3 {
+  font-size: 1.5rem;
 }
-p{
-    font-family: 'Roboto', sans-serif ;
-    font-size: 1.25rem;
-    color: var(--secondary-text-color);
-    line-height: 1.8rem;
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  color: var(--secondary-text-color);
+  line-height: 1.8rem;
 }
-a{
-    text-decoration:none;
-    display: inline-block;
+a {
+  text-decoration: none;
+  display: inline-block;
 }
-
-
-/* utility design */
 
 /* Banner Section */
-.banner{
-    font-size: 1rem;
-    font-weight: 700;
+.banner {
+  font-size: 1rem;
+  font-weight: 700;
 }
-i{
-    letter-spacing: 0.3mm;
+i {
+  letter-spacing: 0.3mm;
 }
-.container{
-    max-width: 1180px;
-    margin-inline: auto;  /*to give argin to left and right simultaneously*/
-    padding-inline: var(--padding-inline-section);
+.container {
+  max-width: 1180px;
+  margin-inline: auto; /*to give argin to left and right simultaneously*/
+  padding-inline: var(--padding-inline-section);
 }
-.top-banner{
-    background-color: #4fb3d4;
-    background-image: url('./images/asset\ 32.png');
-    background-repeat: repeat-x;
-    background-size: 300px;
+.top-banner {
+  background-color: #4fb3d4;
+  background-image: url("./images/asset\ 32.png");
+  background-repeat: repeat-x;
+  background-size: 300px;
 }
-.slogan{
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
+.slogan {
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
 }
 
 /* Navigation section */
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 }
-span{
-    font-weight: 700;
+span {
+  font-weight: 700;
+  color: var(--primary-text-color);
+  font-size: 20px;
+}
+.logo {
+  gap: 5px;
+  padding-top: 3px;
+}
+.main-nav {
+  margin-top: 20px;
+  justify-content: space-between; /*to give space between logo and nav links { two child div is there}*/
+  align-items: center;
+}
+.nav-links {
+  flex-basis: 730px; /*if width is there then it is justified with high space between them*/
+}
+.nav-links ul {
+  justify-content: end;
+  gap: 40px;
+  list-style: none;
+}
+.item {
+  color: var(--primary-text-color);
+}
+.item:hover {
+  color: var(--accent-color);
+  transition: 0.2s ease-out;
+}
+.primary-button {
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  font-weight: 700;
+  padding: 12px 24px;
+  color: white !important;
+  box-shadow: 0 0 2px var(--secondary-text-color);
+}
+.primary-button:hover {
+  background-color: var(--accent-color-dark);
+}
+.secondary-button {
+  border: 0.5px solid var(--secondary-text-color);
+  border-radius: 6px;
+  font-weight: 700;
+  color: var(--primary-text-color) !important;
+  padding: 12px 24px;
+  transition: 0.2s ease-out;
+}
+.secondary-button:hover {
+  border-color: var(--accent-color);
+}
+.links {
+  align-items: center;
+}
+
+/* Hero Section */
+header {
+  padding: 50px var(--padding-inline-section);
+}
+.Hero {
+  justify-content: center;
+  gap: 50px;
+}
+.left-head {
+  max-width: 40vw;
+  text-align: left;
+
+}
+.left-head h2{
+margin-top: 80px;
+
+}
+.quo{
+    padding:20px 0;
+}
+.right-head img {
+  width: 600px;
+}
+.Get-btn {
+  margin-top: 20px;
+}
+
+/* Companies Section */
+.company-quote{
+    text-align: center;
+    margin-block: 30px;
     color: var(--primary-text-color);
-    font-size: 20px;
 }
-.logo{
-    gap: 5px;
+.company-logo{
+    height: 46px;
+
 }
-.main-nav{
-    margin-top: 20px;
-    justify-content: space-between; /*to give space between logo and nav links { two child div is there}*/
+.company-logos{
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.nav-links{
-    flex-basis: 730px;/*if width is there then it is justified with high space between them*/
-}
-.nav-links ul{
-    justify-content: end;
-    gap: 40px;
-    list-style: none;
+.see-all{
+    text-align: center;
+    margin-top: 8px;
+    font-weight:200 !important;
 }
