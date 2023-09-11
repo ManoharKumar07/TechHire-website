@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Lobster&family=Oswald:wght@300&family=Poppins:wght@400;700&family=Roboto:ital,wght@0,400;1,700&display=swap");
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -133,18 +131,16 @@ header {
 .left-head {
   max-width: 40vw;
   text-align: left;
-
 }
-.left-head h2{
-margin-top: 80px;
-
+.left-head h2 {
+  margin-top: 80px;
 }
-.left-head i{
+.left-head i {
   position: relative;
   left: 50%;
 }
-.quo{
-    padding:20px 0;
+.quo {
+  padding: 20px 0;
 }
 .right-head img {
   width: 600px;
@@ -154,71 +150,76 @@ margin-top: 80px;
 }
 
 /* Companies Section */
-.company-quote{
-    text-align: center;
-    margin-block: 30px;
-    color: var(--primary-text-color);
+.company-quote {
+  text-align: center;
+  margin-block: 30px;
+  color: var(--primary-text-color);
 }
-.company-logo{
-    height: 46px;
-
+.company-logo {
+  height: 46px;
 }
-.company-logos{
-    justify-content: space-between;
-    flex-wrap: wrap;
+.company-logos {
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.see-all{
-    text-align: center;
-    margin-top: 8px;
-    font-weight:200 !important;
+.see-all {
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 200 !important;
 }
 /* Big feture Section */
-.big-feature-section{
+.big-feature-section {
   padding: 30px var(--padding-inline-section) 0;
 }
-.big-feature-container{
+.big-feature-container {
   gap: 30px;
-  align-items:center;
-
+  align-items: center;
 }
-.feature-image img{
+.feature-image img {
   width: 95%;
 }
-.feature-disc{
-  flex-direction:column;
+.feature-disc {
+  flex-direction: column;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 /* Free Trail Section */
-.free{
+.free {
   text-align: center;
   margin-top: 100px;
- font-weight: 200;
- padding: 50px var(--padding-inline-section);
- background-color: #2f3f4e;
- color: white !important;
+  font-weight: 200;
+  padding: 50px var(--padding-inline-section);
+  background-color: #2f3f4e;
+  color: white !important;
 }
-.free span{
+.free span {
   color: white;
   font-weight: 100;
 }
-.free a{
+.free a {
   margin-top: 15px;
 }
 
 /* Footer Section */
-.footer-item{
+.footer-item {
   justify-content: space-between;
   padding: 15px var(--padding-inline-section);
- 
 }
-.foot{
+.foot {
   background-color: #b9cde4;
   margin-top: 5px;
 }
 
-.rights{
+.rights {
   text-align: center;
-  padding:10px 25px;
+  padding: 10px 25px;
   padding-bottom: 35px;
+}
+.social-media {
+  /* text-align: center; */
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
 }
