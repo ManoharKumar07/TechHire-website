@@ -54,6 +54,9 @@ i {
   background-image: url("./images/asset\ 32.png");
   background-repeat: repeat-x;
   background-size: 300px;
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 .slogan {
   color: white;
@@ -66,7 +69,7 @@ i {
 .flex {
   display: flex;
 }
-span {
+.logo span {
   font-weight: 700;
   color: var(--primary-text-color);
   font-size: 20px;
@@ -76,9 +79,18 @@ span {
   padding-top: 3px;
 }
 .main-nav {
+  display: flex;
   margin-top: 20px;
   justify-content: space-between; /*to give space between logo and nav links { two child div is there}*/
   align-items: center;
+  position: fixed;
+  padding: 5px;
+  margin-top: 54px;
+  left: 0;
+  right: 0;
+  background: transparent;
+  backdrop-filter: blur(9px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 .nav-links {
   flex-basis: 730px; /*if width is there then it is justified with high space between them*/
@@ -121,10 +133,10 @@ span {
   align-items: center;
 }
 
-
 /* Hero Section */
 header {
-  padding: 50px var(--padding-inline-section);
+  padding: 0px var(--padding-inline-section);
+  padding-top: 110px;
 }
 .Hero {
   justify-content: center;
@@ -150,10 +162,11 @@ header {
 .Get-btn {
   margin-top: 20px;
 }
-#maname{
-  font-size:1.7rem;
+#maname {
+  font-size: 1.7rem;
   color: var(--secondary-text-color);
   font-family: "Poppins", sans-serif;
+  z-index: 999;
 }
 
 /* Companies Section */
@@ -233,34 +246,230 @@ header {
 
 /* Login and Registration form */
 
-.login{
- 
+.close {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.login {
   box-sizing: border-box;
   width: 400px;
   height: 500px;
-  position:relative ;
+  position: absolute;
   top: 100px;
-  left: 50%;
-  transform: translate(-50%,-25%);
-  background-color:transparent;
+  left: 73%;
+  transform: translate(-50%, -50%) scale(0.01);
+  background-color: transparent;
   padding: 5px;
- backdrop-filter: blur(5px);
-  border: 1px solid var(--accent-color);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   color: black;
   border-radius: 15px;
+  overflow: hidden;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.1s, left 0.2s;
 }
-.button-box{
+.open-popup {
+  visibility: visible;
+  z-index: 1000;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.button-box {
   width: 220px;
   margin: 35px auto;
-  position:relative;
+  position: relative;
   box-shadow: 0 0 3px 1px var(--secondary-text-color);
   border-radius: 30px;
 }
-.toggle-button{
+.toggle-button {
   padding: 10px 30px;
   cursor: pointer;
-  background:transparent;
-  border: 0;
+  background: transparent;
+  border: none;
   position: relative;
   outline: none;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #0ad2bea2, #105b99c2);
+  border-radius: 30px;
+  transition: left 0.5s;
+}
+.icon {
+  flex-direction: row;
+  padding: 0px 110px;
+  gap: 40px;
+  align-items: center;
+}
+.icon img {
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.input-group {
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+  margin-left: 50px;
+  margin-top: 10px;
+  color: var(--primary-text-color);
+}
+.input-field {
+  outline: none;
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--secondary-text-color);
+  background: transparent;
+}
+.submit-btn {
+  width: 50%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin-inline: auto;
+  border-radius: 30px;
+  background: linear-gradient(to right, #0ad2bea2, #105b99c2);
+  border: 0;
+}
+.check-box {
+  margin: 30px 10px 30px 0px;
+  font-size: 5px !important;
+}
+.input-group span {
+  font-size: 12px !important;
+  position: absolute;
+  bottom: 64px;
+}
+#log {
+  left: 0px;
+}
+#reg {
+  left: 450px;
+}
+.input-group label #usericon {
+  position: absolute;
+  top: 10%;
+  right: 25px;
+  transition: top 0.5s, left 0.5s;
+}
+.input-group #lockicon {
+  position: absolute;
+  top: 35%;
+  right: 25px;
+  transition: top 0.5s, left 0.5s;
+}
+.input-group #lockic {
+  position: absolute;
+  top: 47%;
+  right: 25px;
+  transition: top 0.5s, left 0.5s;
+}
+.input-group #mailicon {
+  position: absolute;
+  top: 27%;
+  right: 25px;
+  transition: top 0.5s, left 0.5s;
+}
+.input-group #useric {
+  position: absolute;
+  top: 8%;
+  right: 25px;
+  transition: top 0.5s, left 0.5s;
+}
+.input-group input:focus ~ label #usericon,
+.input-group input:valid ~ label #usericon {
+  top: -5px;
+  position: absolute;
+  left: -1px;
+}
+.input-group input:focus ~ label #lockicon,
+.input-group input:valid ~ label #lockicon {
+  top: 27%;
+  position: absolute;
+  left: -1px;
+}
+.input-group input:focus ~ label #useric,
+.input-group input:valid ~ label #useric {
+  top: -5px;
+  position: absolute;
+  left: -1px;
+}
+.input-group input:focus ~ label #mailicon,
+.input-group input:valid ~ label #mailicon {
+  top: 21%;
+  position: absolute;
+  left: -1px;
+}
+.input-group input:focus ~ label #lockic,
+.input-group input:valid ~ label #lockic {
+  top: 41%;
+  position: absolute;
+  left: -1px;
+}
+
+/* welcome message */
+.welcome {
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  height: 300px;
+  width: 400px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 0%) scale(0.01);
+  visibility: hidden;
+  transition: 0.5s;
+}
+.welpop {
+  visibility: visible;
+  top: 25%;
+  z-index: 1001;
+  left: 50%;
+  transform: translate(-50%, 0%) scale(1);
+}
+.welbut {
+  background: linear-gradient(to right, #0ad2bea2, #105b99c2);
+  text-align: center;
+  box-shadow: 0 0 3px 1px var(--secondary-text-color);
+  color: white;
+  font-size: 15px;
+  width: 150px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  position: relative;
+  top: 50px;
+  left: 65px;
+}
+.weltext {
+  position: relative;
+  top: 40%;
+  left: 15%;
+}
+.welcome img {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 150px;
+  width: 170px;
 }
